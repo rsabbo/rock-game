@@ -31,4 +31,17 @@ function getComputerChoice() {
   }
 }
 
-getComputerChoice();
+console.log(getComputerChoice());
+
+function singleRound(playerSelection, computerSelection) {
+  return "You Lose! Paper beats Rock";
+}
+
+computerSelection = getComputerChoice();
+const result = "rOcK";
+playerSelection =
+  result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
+
+console.log(playerSelection);
+
+console.log(singleRound(playerSelection, computerSelection));
