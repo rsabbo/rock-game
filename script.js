@@ -1,47 +1,45 @@
-/*//generate number between 1 and 3
+//computer choices & function for random choice of 1 array's item
 
-function getComputerChoice(max, min) {
+const choices = ["Rock", "Paper", "Scissors"];
 
-  //generate number between max & min
-  const choice = Math.floor(Math.random() * (max - min + 1) + min);
-
-  if (choice === 1) {
-    return "Rock";
-  } else if (choice === 2) {
-    return "Paper";
-  } else {
-    return "Scissors";
-  }
+function computerChoice() {
+  return choices[Math.floor(Math.random() * choices.length)];
 }
 
-getComputerChoice(3, 1);
-*/
+//player choice function
+function playerChoice() {
+  let playerInput = prompt("Rock, Paper or Scissors?");
+  //makes input first letter uppercase and the rest lowercase
+  playerInput =
+    playerInput.charAt(0).toUpperCase() + playerInput.slice(1).toLowerCase();
 
-function getComputerChoice() {
-  //generate number between 0 and 2
-  const choice = Math.floor(Math.random() * 3);
-
-  //define the return for each value
-  if (choice === 0) {
-    return "Rock";
-  } else if (choice === 1) {
-    return "Paper";
-  } else {
-    return "Scissors";
-  }
+  return playerInput;
 }
 
-console.log(getComputerChoice());
-
-function singleRound(playerSelection, computerSelection) {
-  return "You Lose! Paper beats Rock";
-}
-
-computerSelection = getComputerChoice();
-const result = "rOcK";
-playerSelection =
-  result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
+//save the result of each function (computerChoice and playerchoice) inside variables
+const playerSelection = playerChoice();
+const computerSelection = computerChoice();
 
 console.log(playerSelection);
+console.log(computerSelection);
+console.log(gameResults(playerSelection, computerSelection));
 
-console.log(singleRound(playerSelection, computerSelection));
+function gameResults(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return "It's a tie!";
+  } else if (
+    (playerSelection === "Rock" && computerSelection === "Scissors") ||
+    (playerSelection === "Scissors" && computerSelection === "Paper") ||
+    (playerSelection === "Paper" && computerSelection === "Rock")
+  ) {
+    return "Player wins!";
+  } else {
+    return "Computer wins!";
+  }
+}
+
+function game() {
+  gameResults(playerSelection, computerSelection);
+}
+
+game();
