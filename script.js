@@ -28,7 +28,7 @@ function playerChoice() {
   }
 }
 
-//game results
+//game result
 let playerScore = 0;
 let compScore = 0;
 
@@ -45,7 +45,7 @@ function playRound(playerSelection, computerSelection) {
     return `Player wins this round because ${playerSelection} beats ${computerSelection}!`;
   } else {
     compScore++;
-    return `Computer wins this round because ${playerSelection} beats ${playerSelection}!`;
+    return `Computer wins this round because ${computerSelection} beats ${playerSelection}!`;
   }
 }
 
