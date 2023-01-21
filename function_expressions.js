@@ -1,25 +1,25 @@
-//function declaration with computer choices and return for a random choice
-function computerChoice() {
+//function expression for computer choices and return for a random choice
+const computerChoice = function () {
   const choices = ["Rock", "Paper", "Scissors"];
   return choices[Math.floor(Math.random() * choices.length)];
-}
+};
 
-//player choice function declaration
-function playerChoice() {
+//function expression for player choice
+const playerChoice = function () {
   let playerInput = prompt("Rock, Paper or Scissors?");
   //makes input first letter uppercase and the rest lowercase
   playerInput =
     playerInput.charAt(0).toUpperCase() + playerInput.slice(1).toLowerCase();
 
   return playerInput;
-}
+};
 
 //game results
 let playerScore = 0;
 let compScore = 0;
 
-//function declaration with playRound and adding score to the round's winner
-function playRound(playerSelection, computerSelection) {
+//function expression for playRound and adding score to the round's winner
+const playRound = function (playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
     return "It's a tie!";
   } else if (
@@ -28,12 +28,12 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection === "Paper" && computerSelection === "Rock")
   ) {
     playerScore++;
-    return "Player wins this round!";
+    return "Player wins!";
   } else {
     compScore++;
-    return "Computer wins this round!";
+    return "Computer wins!";
   }
-}
+};
 
 //winner
 function winner() {
