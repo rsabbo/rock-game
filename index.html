@@ -4,9 +4,41 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <title>Rock paper scissors</title>
   </head>
   <body>
-    <script src="script.js"></script>
+    <div class="headerSection">
+      <p class="roundWinner">Rock paper scissors</p>
+      <!--<h3 class="roundResults">The first to get 5 points wins!</h3>-->
+    </div>
+
+    <div class="startSection">
+      <div class="rules">Rules:</div>
+      <p class="tools">3 tools<br />5 rounds</p>
+    </div>
+
+    <div class="movesSection displayNone">
+      <p class="playerSum">Player: 0</p>
+      <p class="playerMove">Scissors</p>
+      <p class="compSum">Computer: 0</p>
+      <p class="compMove">Rock</p>
+    </div>
+
+    <div class="playerSection displayNone">
+      <button class="optionBtn" id="rock">Rock</button>
+      <button class="optionBtn" id="paper">Paper</button>
+      <button class="optionBtn" id="scissors">Scissors</button>
+    </div>
+
+    <div class="winnerSection displayNone">
+      <div class="winnerQuote">Better luck next time!</div>
+      <p class="winner">The computer just beat you!</p>
+    </div>
+
+    <div class="resetSection">
+      <button class="reset">Play again</button>
+    </div>
   </body>
 </html>

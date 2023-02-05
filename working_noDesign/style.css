@@ -1,0 +1,21 @@
+/*.reset {
+  display: none;
+}*/
+
+.roundWinner {
+  color: blue;
+}
+
+.compSum,
+.playerSum {
+  color: red;
+}
+
+.roundResults {
+  color: yellowgreen;
+}
+
+.optionBtn2 {
+  pointer-events: none;
+  color: orange;
+}
